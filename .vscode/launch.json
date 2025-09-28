@@ -1,0 +1,54 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Application (ST-Link)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "cwd": "${workspaceFolder}/app",
+      "executable": "${workspaceFolder}/app/firmware.elf",
+      "device": "STM32F103C8",
+      "interface": "swd",
+      "runToEntryPoint": "main",
+      "preLaunchTask": "build_app_debug",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f1x.cfg"
+      ],
+      "svdFile": "${workspaceFolder}/STM32F103.svd",
+      "openOCDLaunchCommands": [
+        "init",
+        "reset init"
+      ],
+      "showDevDebugOutput": "vscode"
+    },
+
+    {
+      "name": "Debug Bootloader (ST-Link)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "cwd": "${workspaceFolder}/bootloader",
+      "executable": "${workspaceFolder}/bootloader/bootloader.elf",
+      "device": "STM32F103C8",
+      "interface": "swd",
+      "runToEntryPoint": "main",
+      "preLaunchTask": "build_bootloader_debug",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f1x.cfg"
+      ],
+      "svdFile": "${workspaceFolder}/STM32F103.svd",
+      "openOCDLaunchCommands": [
+        "init",
+        "reset init"
+      ],
+      "showDevDebugOutput": "raw"
+    },
+  ]
+}
+
+
+
+

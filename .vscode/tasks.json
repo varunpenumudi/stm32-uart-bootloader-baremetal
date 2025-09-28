@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "build_app_debug",
+      "command": "make",
+      "options": {
+        "cwd": "${workspaceFolder}/app"
+      }
+    },
+        {
+      "type": "shell",
+      "label": "build_bootloader_debug",
+      "command": "make",
+      "options": {
+        "cwd": "${workspaceFolder}/bootloader"
+      }
+    },
+  ]
+}

@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/app/inc/**",
+                "${workspaceFolder}/shared/inc/**",
+                "${workspaceFolder}/bootloader/inc/**",
+                "${workspaceFolder}/../libopencm3/**"
+            ],
+            "defines": [
+                "STM32F1",
+                "__ARM_ARCH_7M__"
+            ],
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "cStandard": "c99",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}
